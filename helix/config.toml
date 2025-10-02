@@ -1,0 +1,65 @@
+theme = "onedark"
+
+[editor]
+continue-comments = true
+completion-trigger-len = 1
+line-number = "relative"
+cursorline = true
+color-modes = true
+preview-completion-insert = false
+# rulers = [80]
+
+[editor.statusline]
+right = [ "diagnostics","selections", "position", "file-encoding", 
+         "file-type","total-line-numbers"]  
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.indent-guides]
+render = true
+character = "▏"
+skip-levels = 0
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+[editor.file-picker]
+hidden = true
+
+[keys.normal]
+y = "yank_main_selection_to_clipboard"
+p = "paste_clipboard_before"
+"C-d" = ["move_prev_word_start", "move_next_word_end", "search_selection", "extend_search_next"]
+V = ["goto_first_nonwhitespace", "extend_to_line_end"]
+D = ["ensure_selections_forward", "extend_to_line_end"]
+x = "extend_line"
+a = ["append_mode", "collapse_selection"]
+
+[keys.select]
+y = "yank_main_selection_to_clipboard"
+p = "paste_clipboard_before"
+";" = ["collapse_selection", "normal_mode"]
+
+# Same behaviour as normal mode x
+x = "extend_line"
+
+# Counterpart for normal mode V
+V = "extend_to_line_end"

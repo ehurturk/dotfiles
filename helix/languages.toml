@@ -1,0 +1,11 @@
+[language-server.clangd]
+# config={"fallbackFlags"=["-std=c++17"]}
+
+[[language]]
+name = "cpp"
+auto-format = true
+
+[[language]]
+name = "c"
+auto-format = true
+language-servers = ["clangd"]
